@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- font awesome down -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- link css -->
+    <link rel="stylesheet" href="css/style.css">
+    <title>Contacto</title>
+    <style>
+        .error-message {
+            color: red;
+            margin-top: 10px;
+            font-size: 0.9em;
+        }
+    </style>
+    <script>
+        function validarFormulario() {
+            const nome = document.getElementById('nome').value;
+            const email = document.getElementById('email').value;
+            const assunto = document.getElementById('assunto').value;
+            const mensagem = document.getElementById('mensagem').value;
+            let mensagemErro = '';
+            const errorMessageContainer = document.getElementById('error-message');
+
+            // Limpar mensagens de erro anteriores
+            errorMessageContainer.innerText = '';
+
+            // Validação do nome
+            if (nome.trim() === '') {
+                mensagemErro += 'O nome é obrigatório.\n';
+            }
+
+            // Validação do e-mail
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (email.trim() === '') {
+                mensagemErro += 'O e-mail é obrigatório.\n';
+            } else if (!emailRegex.test(email)) {
+                mensagemErro += 'Por favor, insira um e-mail válido.\n';
+            }
+
+            // Validação do assunto
+            if (assunto.trim() === '') {
+                mensagemErro += 'O assunto é obrigatório.\n';
+            }
+
+            // Validação da mensagem
+            if (mensagem.trim() === '') {
+                mensagemErro += 'A mensagem é obrigatória.\n';
+            }
+
+            if (mensagemErro) {
+                errorMessageContainer.innerText = mensagemErro.trim().replace(/\n/g, ' ');
+                return false; // Não envia o e-mail
+            } else {
+                enviarEmail(); // Chama a função para enviar o e-mail
+            }
+        }
+
+        function enviarEmail() {
+            const nome = document.getElementById('nome').value;
+            const email = document.getElementById('email').value;
+            const assunto = document.getElementById('assunto').value;
+            const mensagem = document.getElementById('mensagem').value;
+
+            const mailtoLink = `kaweletony0@gmail.com?subject=${encodeURIComponent(assunto)}&body=Nome: ${encodeURIComponent(nome)}%0D%0AEmail: ${encodeURIComponent(email)}%0D%0AMensagem: ${encodeURIComponent(mensagem)}`;
+
+            window.location.href = mailtoLink;
+        }
+    </script>
+</head>
+<body>
+    <!-- header -->
+    <header style="background-image: url('img/trasnsport plane.png.jpg');">
+        <div class="container">
+            <nav>
+                <a href="index.html">
+                    <img src="img/west wings png.png" alt="logo">
+                </a>
+                <ul class="ul">
+                    <a href="index.html">Home</a>
+                    <a href="sobre.html">Sobre</a>
+                    <a href="servicos.html">Serviços</a>
+                    <a class="btn" href="contacto.html">Contacto</a>
+                    <div class="close-icon" onclick="closeMenu()">
+                        <i class="fa fa-times-circle-o"></i>
+                    </div>
+                </ul>
+                <div class="menu-icon" onclick="openMenu()">
+                    <i class="fa fa-bars"></i>
+                </div>
+            </nav>
+            <section class="banner">
+                <div class="banner-text">
+                    <h1>Entre em contacto connosco</h1>
+                    <p>"Seja para discutir oportunidades de negócios, soluções logísticas ou qualquer outra necessidade, estamos aqui para ajudar. Entre em contato e descubra como podemos otimizar suas operações globais com eficiência e confiança."</p>
+                </div>
+            </section>
+        </div>
+    </header>
+    <section class="contacto">
+        <div class="container">
+            <div class="mapa">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3003.0142972527233!2d13.233475173600315!3d-8.840545790513548!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1a51f3aba5f15e2f%3A0x7ec60780f9bf03c0!2sWEST%20WINGS%2CAngola!5e1!3m2!1spt-PT!2sao!4v1728296256755!5m2!1spt-PT!2sao" width="100%" height="500px" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            <div class="contacto-info">
+                <div class="left-side">
+                    <div>
+                        <i class="fa fa-map-pin" aria-hidden="true"></i>
+                        <p>WEST WINGS, Angola zona 09, No 121, Luanda</p>
+                    </div>
+                    <div>
+                        <i class="fa fa-envelope" aria-hidden="true"></i>
+                        <p>kaweletony0@gmail.com</p> <!-- Substitua pelo e-mail real -->
+                    </div>
+                    <div>
+                        <i class="fa fa-mobile" aria-hidden="true"></i>
+                        <p>+244 939 077 005</p>
+                    </div>
+                </div>
+                <div class="right-side">
+                    <form onsubmit="event.preventDefault(); validarFormulario();">
+                        <input type="text" id="nome" placeholder="Nome" required>
+                        <input type="email" id="email" placeholder="Email" required>
+                        <input type="text" id="assunto" placeholder="Assunto" required>
+                        <textarea id="mensagem" cols="30" rows="10" placeholder="Escreva aqui" required></textarea>
+                        <button type="submit" class="btn">Enviar Mensagem</button>
+                        <div id="error-message" class="error-message"></div> <!-- Div para mensagens de erro -->
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- start of footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="links">
+                <a href="#"><i class="fa fa-facebook"></i></a>
+                <a href="#"><i class="fa fa-instagram"></i></a>
+                <a href="#"><i class="fa fa-linkedin"></i></a>
+            </div>
+            <p>Desenvolvido por António Kawele & Arnaldo Miguel</p>
+        </div>
+    </footer>
+    <!-- end footer -->
+
+    <!-- link do html e javascript para o efeito menu -->
+    <script src="js/main.js"></script>
+</body>
+</html>
