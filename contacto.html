@@ -64,7 +64,7 @@
             const assunto = document.getElementById('assunto').value;
             const mensagem = document.getElementById('mensagem').value;
 
-            const mailtoLink = `kaweletony0@gmail.com?subject=${encodeURIComponent(assunto)}&body=Nome: ${encodeURIComponent(nome)}%0D%0AEmail: ${encodeURIComponent(email)}%0D%0AMensagem: ${encodeURIComponent(mensagem)}`;
+            const mailtoLink = `mailto:kaweletony0@gmail.com?subject=${encodeURIComponent(assunto)}&body=Nome: ${encodeURIComponent(nome)}%0D%0AEmail: ${encodeURIComponent(email)}%0D%0AMensagem: ${encodeURIComponent(mensagem)}`;
 
             window.location.href = mailtoLink;
         }
