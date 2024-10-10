@@ -499,21 +499,21 @@ transition: 0.3s;
 /* PRA AJUSTAR AS IMAGENS DE FUNDO */
 .banner {
     background-image: url('img/industrial-port.png.jpg');
-    background-size: cover;
+    background-size: contain; /* Altera para contain */
     background-position: center;
-    height: 100vh; /* Use o valor adequado para sua necessidade */
+    height: 100vh; /* Ajuste conforme necessário */
 }
 
 .sobre .sobre-img {
     background-image: url('img/photorealistic-scene-with-warehouse-logistics-operations.jpg');
-    background-size: cover;
+    background-size: contain; /* Altera para contain */
     background-position: center;
-    height: 400px; /* Altura adequada */
+    height: 400px; /* Ajuste a altura conforme necessário */
 }
 
 .contacto-info {
     background-image: url('img/trasnsport plane.png.jpg');
-    background-size: cover;
+    background-size: contain; /* Altera para contain */
     background-position: center;
     padding: 50px 0;
     height: auto; /* Ajustável */
