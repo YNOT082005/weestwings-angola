@@ -496,20 +496,40 @@ transition: 0.3s;
 
     }
 }
-/* para alinhar as imagens */
-.sobre .sobre-img img {
-    max-width: 100%; /* Garante que a imagem não ultrapasse a largura do contêiner */
-    height: auto; /* Mantém a proporção da imagem */
+/* PRA AJUSTAR AS IMAGENS DE FUNDO */
+.banner {
+    background-image: url('img/industrial-port.png.jpg'); /* Substitua pela URL da imagem de fundo da banner */
+    background-size: cover; /* Garante que a imagem preencha todo o espaço */
+    background-position: center; /* Centraliza a imagem */
+    height: 100vh; /* Define a altura da seção */
 }
-.contacto-info .left-side img {
-    max-width: 100%; /* Garante que a imagem não ultrapasse a largura do contêiner */
-    height: auto; /* Mantém a proporção da imagem */
+
+.sobre .sobre-img {
+    background-image: url('img/photorealistic-scene-with-warehouse-logistics-operations.jpg'); /* Substitua pela URL da imagem de fundo da seção Sobre */
+    background-size: cover; /* Garante que a imagem preencha todo o espaço */
+    background-position: center; /* Centraliza a imagem */
+    height: 100%; /* Mantém a altura do contêiner */
 }
-.banner .banner-text img,
-.saiba-mais .saiba-mais-img img {
-    max-width: 100%; /* Isso garante que a imagem não ultrapasse a largura do contêiner */
-    height: auto; /* Mantém a proporção da imagem */
+
+.contacto-info {
+    background-image: url('img/trasnsport plane.png.jpg'); /* Substitua pela URL da imagem de fundo da seção Contato */
+    background-size: cover; /* Garante que a imagem preencha todo o espaço */
+    background-position: center; /* Centraliza a imagem */
+    padding: 50px 0; /* Espaçamento interno */
 }
+
+/* Ajustes para dispositivos móveis */
+@media (max-width: 768px) {
+    .banner {
+        height: 60vh; /* Ajusta a altura para telas menores */
+    }
+
+    .sobre .sobre-img,
+    .contacto-info {
+        height: auto; /* Ajusta a altura para se adaptar ao conteúdo */
+    }
+}
+
 
 
 }
