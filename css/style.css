@@ -498,35 +498,35 @@ transition: 0.3s;
 }
 /* PRA AJUSTAR AS IMAGENS DE FUNDO */
 .banner {
-    background-image: url('img/industrial-port.png.jpg'); /* Substitua pela URL da imagem de fundo da banner */
-    background-size: cover; /* Garante que a imagem preencha todo o espaço */
-    background-position: center; /* Centraliza a imagem */
-    height: 100vh; /* Define a altura da seção */
+    background-image: url('img/industrial-port.png.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh; /* Use o valor adequado para sua necessidade */
 }
 
 .sobre .sobre-img {
-    background-image: url('img/photorealistic-scene-with-warehouse-logistics-operations.jpg'); /* Substitua pela URL da imagem de fundo da seção Sobre */
-    background-size: cover; /* Garante que a imagem preencha todo o espaço */
-    background-position: center; /* Centraliza a imagem */
-    height: 100%; /* Mantém a altura do contêiner */
+    background-image: url('img/photorealistic-scene-with-warehouse-logistics-operations.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 400px; /* Altura adequada */
 }
 
 .contacto-info {
-    background-image: url('img/trasnsport plane.png.jpg'); /* Substitua pela URL da imagem de fundo da seção Contato */
-    background-size: cover; /* Garante que a imagem preencha todo o espaço */
-    background-position: center; /* Centraliza a imagem */
-    padding: 50px 0; /* Espaçamento interno */
+    background-image: url('img/trasnsport plane.png.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 50px 0;
+    height: auto; /* Ajustável */
 }
 
 /* Ajustes para dispositivos móveis */
 @media (max-width: 768px) {
     .banner {
-        height: 60vh; /* Ajusta a altura para telas menores */
+        height: 60vh; /* Ajuste para telas menores */
     }
-
     .sobre .sobre-img,
     .contacto-info {
-        height: auto; /* Ajusta a altura para se adaptar ao conteúdo */
+        height: auto; /* Ajuste conforme necessário */
     }
 }
 
