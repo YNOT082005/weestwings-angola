@@ -496,5 +496,20 @@ transition: 0.3s;
 
     }
 }
+/* para alinhar as imagens */
+.sobre .sobre-img img {
+    max-width: 100%; /* Garante que a imagem não ultrapasse a largura do contêiner */
+    height: auto; /* Mantém a proporção da imagem */
+}
+.contacto-info .left-side img {
+    max-width: 100%; /* Garante que a imagem não ultrapasse a largura do contêiner */
+    height: auto; /* Mantém a proporção da imagem */
+}
+.banner .banner-text img,
+.saiba-mais .saiba-mais-img img {
+    max-width: 100%; /* Isso garante que a imagem não ultrapasse a largura do contêiner */
+    height: auto; /* Mantém a proporção da imagem */
+}
+
 
 }
