@@ -1,7 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap');
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -9,247 +8,223 @@
     outline: none;
     font-family: "Inter", sans-serif;
 }
-body{
-    background-color: #f8f2cf;
-}
-section,footer{
-    padding: 54px 0;
 
+body {
+    background-color: #f6e9c031;
 }
-h3{
+
+section, footer {
+    padding: 54px 0;
+    background-position: center;
+    background-size: cover;
+    background-attachment: scroll;
+}
+
+h3 {
     font-size: 50px;
 }
-p{
-    color: #0000009c; 
-/* cor do paragrafo (p) escrito bem vindos a west... */
+
+p {
+    color: #0000009c;
+    /* cor do paragrafo (p) escrito bem vindos a west... */
 }
-.container{
+
+.container {
     max-width: 1400px;
     margin: 0 auto;
     padding: 0 5%;
 }
-.btn{
+
+.btn {
     /* botao contactos config */
     background-color: #ece522;
     color: white;
-    padding: 10px 15px;                    
-    border-radius: 10px;
+    padding: 10px 15px;
     cursor: pointer;
     display: inline-block;
-    transition: 0,1s;
+    transition: 0.1s;
 }
 
-.btn:hover{
-    background-color: #777417;
+.btn:hover {
+    background-color: #f8f89a;
     /* animação ao clicar o botão contactos */
 }
 
-@keyframes animate-outline {
-    from{
-        outline: 0px solid #fff701;
-    }
-    to{
-        outline: 20px solid #fff700;
-    }
-    
-}
-
-header{
+header {
     background-position: center;
     background-size: cover;
-    background-attachment: fixed ;
+    background-attachment: fixed;
+    height: 100vh; /* Define a altura como 100% da altura da viewport */
 }
-nav{
+
+nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding-top: 30 px;
+    padding-top: 30px;
 }
-nav ul{
+
+nav ul {
     display: flex;
     align-items: center;
-
 }
-nav ul a{
 
-    /* botao home, contactos,etc  */
+nav ul a {
+    /* botao home, contactos,etc */
     color: #f9f9f9;
     margin: 0 25px;
-    text-transform:uppercase;
+    text-transform: uppercase;
     font-size: 14px;
     display: block;
 }
 
-
-nav ul a::after{
+nav ul a::after {
     content: "";
     background-color: #ece522;
-    height: 3px;                      /*  para colacar a animação de baixo do sobre,contactos etc... */
+    height: 3px; /* animação de baixo dos links */
     width: 0%;
     display: block;
 }
-nav ul a:hover::after{
-    width: 100%;       
- /* continuacão da animação */
+
+nav ul a:hover::after {
+    width: 100%;
+    /* continuação da animação */
 }
 
-/* menu mobile */
-nav .menu-icon{
+/* Menu mobile */
+nav .menu-icon {
     cursor: pointer;
     font-size: 25px;
     color: white;
-    display: none;  
-    /* o display none serve para ocultar o menu quando estiver no modo desktop */
-
+    display: none;
 }
-/* end menu */
-nav .close-icon{
+
+nav .close-icon {
     display: none;
     font-size: 30px;
     color: white;
 }
 
-.banner{
+.banner {
     display: flex;
     justify-content: center;
-
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 100vh;
 }
-.banner .banner-text{
+
+.banner .banner-text {
     margin: 150px;
     text-align: center;
     padding: 0 90px;
 }
-.banner .banner-text h1{
+
+.banner .banner-text h1 {
     font-size: 90px;
     color: white;
-
 }
-.banner .banner-text p{
+
+.banner .banner-text p {
     font-size: 25px;
     color: #ffffff;
     font-weight: lighter;
     margin: 12px 0;
 }
-/* saiba mais */
-.saiba-mais .container{
+
+/* Saiba mais */
+.saiba-mais .container {
     display: flex;
     align-items: center;
 }
-.saiba-mais .saiba-mais-text{
-width: 50%;
-padding: 0 40px ;
-}
-.saiba-mais .saiba-mais-text h3{
-    font-size: 56px;
-}
-.saiba-mais .saiba-mais-text p{
-    margin: 5px 0 10px 0;
-}
-.saiba-mais .saiba-mais-img{
-    width : 50%;
-    
-}
-/* .saiba-mais .saiba-mais-img{
-    width: 100%;
-  */
-.depoimentos h3{
-    text-align: center;
-    /* texto depoimento */
+
+.saiba-mais .saiba-mais-text {
+    width: 50%;
+    padding: 0 40px;
 }
 
-  .depoimentos p{
-    /* o comentario do depoimento */
+.saiba-mais .saiba-mais-text h3 {
+    font-size: 56px;
+}
+
+.saiba-mais .saiba-mais-text p {
+    margin: 5px 0 10px 0;
+}
+
+.saiba-mais .saiba-mais-img {
+    width: 50%;
+}
+
+.depoimentos h3 {
+    text-align: center;
+}
+
+.depoimentos p {
     margin-bottom: 20px;
     text-align: center;
 }
-.cards{
-    /* cards do depoimento */
+
+.cards {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
 }
 
 .depoimentos .card-item {
-
-    
     background-color: rgba(244, 160, 50, 0.728);
-    margin: 15px; 
-    border-radius: 14px;
+    margin: 15px;
     text-align: center;
     width: 350px;
     transition: 0.3s;
-    
 }
-/* esse comentario e para o cod acima margin 
-para o espacamento,border ele vai arrendendor 
-os contas,alinha o texto no centro,width largura */
 
 .depoimentos .card-item img {
-    border: 100%;
     width: 80px;
     display: block;
     margin: 10px auto;
 }
-/* esse comentario e pra cima width altura dos cards*/
 
-.depoimentos .card-item .nome-user{
+.depoimentos .card-item .nome-user {
     font-weight: 600;
     font-size: 20px;
     margin-bottom: 15px;
 }
-.depoimentos .card-item .depoimentos-user{
+
+.depoimentos .card-item .depoimentos-user {
     font-size: 15px;
     padding: 0 15px;
 }
-.depoimentos .card-item .stars{
-    margin: 15px 0;
-    border-top: 5px solid rgba(255, 255, 0, 0.511);
-}
-.depoimentos .card-item .stars i{
-    color: cornsilk;
-    margin-top: 15px;
-    font-size: 20px;
 
-}
-.depoimentos .card-item:hover{
+.depoimentos .card-item:hover {
     background-color: rgb(240, 172, 2);
     margin-top: -5px;
 }
-/* esse comentario ]e para o cod acima efeito ao clicar 
-os comentarios ,transition no .depoimento .carditem para estar mas suave  */
 
 .depoimentos .card-item:hover .nome-user,
-.depoimentos .card-item:hover .depoimentos-user
-{
+.depoimentos .card-item:hover .depoimentos-user {
     color: #ffffff;
 }
-/* esse comentario ]e para o cod acima mudanca de cor quando clicas no comentario */
 
-
-/*  Parceiros*/
+/* Parceiros */
 .parceiros h3,
-.parceiros p{
+.parceiros p {
     text-align: center;
 }
-.parceiros .container div{
+
+.parceiros .container div {
     display: flex;
     align-items: center;
     justify-content: space-around;
     flex-wrap: wrap;
 }
-/* .servicos .nossos-servicos h3
-    .nossos-servicos .container{
-    display: flex;
-    align-items: center;
-/ } */
 
-/* footer */
-.footer{
+/* Footer */
+.footer {
     background-color: rgb(245, 231, 160);
     text-align: center;
-
 }
-.footer i{
+
+.footer i {
     color: gold;
     font-size: 19px;
     background-color: white;
@@ -257,152 +232,105 @@ os comentarios ,transition no .depoimento .carditem para estar mas suave  */
     margin: 3px;
     border-radius: 10px;
 }
-.footer p{
+
+.footer p {
     margin-top: 10px;
     color: white;
 }
-/* Pagina sobre  */
-.sobre .container{
+
+/* Página sobre */
+.sobre .container {
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
-  /* .sobre .sobre-text {
-    width: 50%;
-    padding-right: 40%;
-  } */
-.sobre .sobre-text p{
 
-    margin: 18px ;
+.sobre .sobre-text {
+    width: 50%;
+    padding-right: 40px;
+}
+
+.sobre .sobre-text p {
+    margin: 18px;
     color: #000000a6;
 }
-.sobre .sobre-img{
 
-    width: 100%;
+.sobre .sobre-img {
+    width: 50%;
 }
-.sobre .sobre-img img{
-    width: 120%;
+
+.sobre .sobre-img img {
+    width: 100%;
     border-radius: 50px;
 }
 
-/* end pagina sobre */
-
-/* pagina servicos */
-.servicos h3{
-    text-align: center;
-
-}
-.servicos .container{
+/* Página serviços */
+.servicos h3 {
     text-align: center;
 }
-.servicos .rows-cards{
+
+.servicos .container {
+    text-align: center;
+}
+
+.servicos .rows-cards {
     display: flex;
     justify-content: center;
     margin-top: 20px;
     flex-wrap: wrap;
 }
-.servicos .row-card-item{
-   background-color: rgb(227, 191, 101); 
-   width: 350px;
-   padding: 20px;
-   border-radius: 14px;
-   margin: 20px;
-} 
-.servicos .row-card-item:hover{
+
+.servicos .row-card-item {
+    background-color: rgb(227, 191, 101);
+    width: 350px;
+    padding: 20px;
+    border-radius: 14px;
+    margin: 20px;
+}
+
+.servicos .row-card-item:hover {
     background-color: rgba(255, 217, 0, 0.509);
     transition: 0.3s;
 }
-.servicos .row-card-item:hover p{
+
+.servicos .row-card-item:hover p {
     color: #ffffff;
 }
-.servicos .row-card-item img{
+
+.servicos .row-card-item img {
     background-color: #f1efad;
     border-radius: 14px;
     width: 70px;
     padding: 9px;
 }
-.servicos .row-card-item p.nome-servico{
+
+.servicos .row-card-item p.nome-servico {
     margin: 5px;
     transition: 0.3s;
 }
-.servicos .row-card-item p.descricao-servico{
-transition: 0.3s;
 
-}
-/* end pagina servicos */
-
-/* pagina de  contactos */
-.contacto-info{
+/* Página de contactos */
+.contacto-info {
     display: flex;
     justify-content: space-between;
     margin-top: 50px;
-
 }
-.contacto-info .left-side{
+
+.contacto-info .left-side {
     width: 50%;
     padding: 30px;
     background-color: #f5ef42;
     border-radius: 14px;
     margin-right: 50px;
     height: fit-content;
-    
 }
-.contacto-info .left-side div{
-    display: flex;
-    align-items: center;
-    margin-bottom: 10px;
-    
-}
-.contacto-info .left-side div i{
-    font-size: 24px;
-    margin-right: 20px;
-    color: white;
-}
-.contacto-info .left-side p{
-    font-size: 17px;
-    color: white;
-}
-.contacto-info .right-side{
+
+.contacto-info .right-side {
     width: 50%;
 }
-.contacto-info .right-side input{
-    display: block;
-    width: 100%;
-    margin-bottom: 10px;
-    height: 47px;
-    padding: 15px;
-    border-radius: 9px;
-    transition: 0.3s;
-    border: 1 px solid #f1f1f1;
-    color: #212121;
-    font-weight: lighter;
-    border: none;
-}
-.contacto-info .right-side input:focus,
-.contacto-info .right-side textarea:focus{
-    border-color: #ece522;
-}
-.contacto-info .right-side textarea{
-    border: 1px solid #f1f1f1;
-    color: #212121;
-    border-radius: 9px;
-    margin-bottom: 10px;
-    padding: 15px;
-    width: 100%;
-    transition: 0.3s;
-    resize: none;
-}
-.contacto-info .right-side button{
-    border: none;
 
-}
-
-
-/* end pagina de contacos */
-
-@media(max-width: 830px){
-
-    /* menu mobile ajuste de tela completo do site */
+/* Responsividade */
+@media(max-width: 830px) {
     .ul {
         position: fixed;
         top: 0;
@@ -415,121 +343,75 @@ transition: 0.3s;
         justify-content: center;
         clip-path: circle(0% at 100% 0);
         transition: 0.7s;
-    
     }
-    .ul.open{
+
+    .ul.open {
         clip-path: circle(141.4% at 100% 0);
     }
 
-    .ul a{
+    .ul a {
         margin: 10px 0;
         font-size: 16px;
     }
-    nav .menu-icon{
+
+    nav .menu-icon {
         display: block;
     }
-    nav .close-icon{
-      display: block;
-      position: absolute;
-      top: 46px;
-      right: 28px;
-    }
-    /* pagina home responsivo */
-    .saiba-mais .saiba-mais-text{
-        margin-top: 10px;
-        padding: 0 20px;
-        order: 1;
-    }
-    .saiba-mais .container{
-        flex-direction: column ;
 
+    nav .close-icon {
+        display: block;
+        position: absolute;
+        top: 46px;
+        right: 28px;
     }
-    .saiba-mais .saiba-mais-text h3{
-        font-size: 48px;
 
+    .saiba-mais .container {
+        flex-direction: column;
     }
+
     .saiba-mais .saiba-mais-text,
-    .saiba-mais .saiba-mais-img{
+    .saiba-mais .saiba-mais-img {
         width: 100%;
-
     }
-    /* banner responsivo */
-    .banner .banner-text{
+
+    .banner .banner-text {
         padding: 0;
         margin: 80px;
+    }
 
-    }
-    .banner .banner-text h1{
-        font-size: 80px ;
-    }
-    .banner .banner-text p{
-        font-size: 15px ;
-    }
-    .depoimentos .card-item{
+    .depoimentos .card-item {
         width: 100%;
     }
+
     .sobre .sobre-img,
-    .sobre .sobre-text{
+    .sobre .sobre-text {
         width: 100%;
- }
- .sobre .sobre-text{
- margin-top: 40px;
-}
-/* pagina contactos responsivo */
-.contacto .contacto-info{
-    flex-direction: column-reverse ;
-}
-.contacto-info .right-side,
-.contacto-info .left-side{
-    width: 100%;
-}
-.contacto-info .right-side{
-    margin-bottom: 30px;
-
-}
-@media (max-width:500px){
-    .banner .banner-text h1{
-        font-size: 50px;
     }
-    .saiba-mais .saiba-mais-text h3{
-        font-size: 40px;
 
+    .sobre .sobre-text {
+        margin-top: 40px;
     }
-}
-/* PRA AJUSTAR AS IMAGENS DE FUNDO */
-.banner {
-    background-image: url('img/industrial-port.png.jpg');
-    background-size: contain; /* Altera para contain */
-    background-position: center;
-    height: 100vh; /* Ajuste conforme necessário */
-}
 
-.sobre .sobre-img {
-    background-image: url('img/photorealistic-scene-with-warehouse-logistics-operations.jpg');
-    background-size: contain; /* Altera para contain */
-    background-position: center;
-    height: 400px; /* Ajuste a altura conforme necessário */
-}
-
-.contacto-info {
-    background-image: url('img/trasnsport plane.png.jpg');
-    background-size: contain; /* Altera para contain */
-    background-position: center;
-    padding: 50px 0;
-    height: auto; /* Ajustável */
-}
-
-/* Ajustes para dispositivos móveis */
-@media (max-width: 768px) {
-    .banner {
-        height: 60vh; /* Ajuste para telas menores */
-    }
-    .sobre .sobre-img,
     .contacto-info {
-        height: auto; /* Ajuste conforme necessário */
+        flex-direction: column;
+    }
+
+    .contacto-info .left-side,
+    .contacto-info .right-side {
+        width: 100%;
     }
 }
 
+@media (max-width: 500px) {
+    header {
+        background-size: cover;
+        background-position: center;
+        background-attachment: scroll; /* Remove o efeito "fixo" para evitar distorção em dispositivos pequenos */
+    }
 
-
+    .banner {
+        background-size: cover;
+        background-position: center;
+        height: 50vh; /* Ajusta a altura do banner para telas menores */
+    }
 }
