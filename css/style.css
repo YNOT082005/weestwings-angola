@@ -10,7 +10,7 @@
     font-family: "Inter", sans-serif;
 }
 body{
-    background-color: #f6e9c031;
+    background-color: #f3d52b31;
 }
 section,footer{
     padding: 54px 0;
@@ -33,14 +33,14 @@ p{
     background-color: #ece522;
     color: white;
     padding: 10px 15px;                    
-    /* border-radius: 10px; */
+    border-radius: 10px;
     cursor: pointer;
     display: inline-block;
     transition: 0,1s;
 }
 
 .btn:hover{
-    background-color: #f8f89a;
+    background-color: #777417;
     /* animação ao clicar o botão contactos */
 }
 
@@ -149,12 +149,9 @@ padding: 0 40px ;
     width : 50%;
     
 }
-
 /* .saiba-mais .saiba-mais-img{
     width: 100%;
   */
-
-  
 .depoimentos h3{
     text-align: center;
     /* texto depoimento */
@@ -177,7 +174,7 @@ padding: 0 40px ;
     
     background-color: rgba(244, 160, 50, 0.728);
     margin: 15px; 
-    border-radius: 0;
+    border-radius: 14px;
     text-align: center;
     width: 350px;
     transition: 0.3s;
@@ -270,8 +267,8 @@ os comentarios ,transition no .depoimento .carditem para estar mas suave  */
     align-items: center;
     justify-content: space-between;
 }
-  .sobre .sobre-text {
-    width: 25;
+  /* .sobre .sobre-text {
+    width: 50%;
     padding-right: 40%;
   } */
 .sobre .sobre-text p{
@@ -281,7 +278,7 @@ os comentarios ,transition no .depoimento .carditem para estar mas suave  */
 }
 .sobre .sobre-img{
 
-    width: 200%;
+    width: 100%;
 }
 .sobre .sobre-img img{
     width: 120%;
@@ -499,12 +496,5 @@ transition: 0.3s;
 
     }
 }
-.line {
-    width: 100%;
-    height: 2px; /* Altere a altura conforme necessário */
-    background-color: #f01616; /* Altere a cor conforme necessário */
-    margin: 20px 0; /* Altere a margem conforme necessário */
-}
-
 
 }
