@@ -1,5 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap');
 
+/* Reset de estilos */
 * {
     margin: 0;
     padding: 0;
@@ -13,16 +14,20 @@ body {
     background-color: #f6e9c031;
 }
 
+/* Seções gerais */
 section, footer {
-    padding: 4% 0; /* Reduzido para melhorar a responsividade */
+    padding: 54px 0;
+    background-position: center;
+    background-size: cover;
+    background-attachment: scroll;
 }
 
 h3 {
-    font-size: 5vw; /* Usando viewport width para adaptação */
+    font-size: 50px;
 }
 
 p {
-    color: #0000009c; 
+    color: #0000009c;
 }
 
 .container {
@@ -31,30 +36,34 @@ p {
     padding: 0 5%;
 }
 
+/* Botões */
 .btn {
     background-color: #ece522;
     color: white;
-    padding: 1% 2%; /* Alterado para porcentagem */
+    padding: 10px 15px;
     cursor: pointer;
     display: inline-block;
-    transition: background-color 0.3s;
+    transition: 0.1s;
 }
 
 .btn:hover {
     background-color: #f8f89a;
 }
 
+/* Estilos do header */
 header {
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
+    height: 100vh;
 }
 
+/* Navegação */
 nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding-top: 30px; /* Corrigido */
+    padding-top: 30px;
 }
 
 nav ul {
@@ -64,15 +73,16 @@ nav ul {
 
 nav ul a {
     color: #f9f9f9;
-    margin: 0 2vw; /* Usando vw para adaptação */
+    margin: 0 25px;
     text-transform: uppercase;
-    font-size: 1.5vw; /* Usando vw para adaptação */
+    font-size: 14px;
+    display: block;
 }
 
 nav ul a::after {
     content: "";
     background-color: #ece522;
-    height: 3px; 
+    height: 3px;
     width: 0%;
     display: block;
 }
@@ -81,50 +91,69 @@ nav ul a:hover::after {
     width: 100%;
 }
 
+/* Ícones de menu */
+nav .menu-icon {
+    cursor: pointer;
+    font-size: 25px;
+    color: white;
+    display: none;
+}
+
+nav .close-icon {
+    display: none;
+    font-size: 30px;
+    color: white;
+}
+
+/* Seção de Banner */
 .banner {
     display: flex;
     justify-content: center;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 100vh;
 }
 
 .banner .banner-text {
-    margin: 10%; /* Usando porcentagem para espaçamento */
+    margin: 150px;
     text-align: center;
-    padding: 0 5%; /* Usando porcentagem */
+    padding: 0 90px;
 }
 
 .banner .banner-text h1 {
-    font-size: 8vw; /* Usando vw para adaptação */
+    font-size: 25px;
     color: white;
 }
 
 .banner .banner-text p {
-    font-size: 4vw; /* Usando vw para adaptação */
+    font-size: 25px;
     color: #ffffff;
     font-weight: lighter;
-    margin: 2% 0; /* Usando porcentagem para espaçamento */
+    margin: 12px 0;
 }
 
+/* Seção Saiba Mais */
 .saiba-mais .container {
     display: flex;
-    flex-wrap: wrap; /* Permite que se adapte a diferentes tamanhos de tela */
     align-items: center;
 }
 
 .saiba-mais .saiba-mais-text {
-    width: 100%; /* Altera para 100% para telas pequenas */
-    padding: 0 5%;
+    width: 50%;
+    padding: 0 40px;
 }
 
 .saiba-mais .saiba-mais-text h3 {
-    font-size: 5vw; /* Usando vw para adaptação */
+    font-size: 56px;
 }
 
 .saiba-mais .saiba-mais-text p {
-    margin: 2% 0;
+    margin: 5px 0 10px 0;
 }
 
 .saiba-mais .saiba-mais-img {
-    width: 100%; /* Altera para 100% para telas pequenas */
+    width: 50%;
 }
 
 /* Depoimentos */
@@ -133,28 +162,25 @@ nav ul a:hover::after {
 }
 
 .depoimentos p {
-    margin-bottom: 2%;
+    margin-bottom: 20px;
     text-align: center;
 }
 
 .cards {
     display: flex;
     justify-content: center;
-    flex-wrap: wrap; /* Permite que se adapte a diferentes tamanhos de tela */
+    flex-wrap: wrap;
 }
 
 .depoimentos .card-item {
     background-color: rgba(244, 160, 50, 0.728);
-    margin: 2%; /* Usando porcentagem para espaçamento */
-    border-radius: 0;
+    margin: 15px;
     text-align: center;
-    width: 90%; /* Altera para 90% para telas pequenas */
-    max-width: 350px; /* Mantém a largura máxima */
+    width: 350px;
     transition: 0.3s;
 }
 
 .depoimentos .card-item img {
-    border-radius: 50%; /* Alterado para border-radius */
     width: 80px;
     display: block;
     margin: 10px auto;
@@ -162,17 +188,13 @@ nav ul a:hover::after {
 
 .depoimentos .card-item .nome-user {
     font-weight: 600;
-    font-size: 4vw; /* Usando vw para adaptação */
+    font-size: 20px;
+    margin-bottom: 15px;
 }
 
 .depoimentos .card-item .depoimentos-user {
-    font-size: 3vw; /* Usando vw para adaptação */
-    padding: 0 5%;
-}
-
-.depoimentos .card-item .stars {
-    margin: 2% 0;
-    border-top: 5px solid rgba(255, 255, 0, 0.511);
+    font-size: 15px;
+    padding: 0 15px;
 }
 
 .depoimentos .card-item:hover {
@@ -185,7 +207,7 @@ nav ul a:hover::after {
     color: #ffffff;
 }
 
-/* Parceiros */
+/* Seção Parceiros */
 .parceiros h3,
 .parceiros p {
     text-align: center;
@@ -195,7 +217,7 @@ nav ul a:hover::after {
     display: flex;
     align-items: center;
     justify-content: space-around;
-    flex-wrap: wrap; /* Permite que se adapte a diferentes tamanhos de tela */
+    flex-wrap: wrap;
 }
 
 /* Footer */
@@ -206,7 +228,7 @@ nav ul a:hover::after {
 
 .footer i {
     color: gold;
-    font-size: 2vw; /* Usando vw para adaptação */
+    font-size: 19px;
     background-color: white;
     padding: 10px;
     margin: 3px;
@@ -218,33 +240,33 @@ nav ul a:hover::after {
     color: white;
 }
 
-/* Sobre */
+/* Página sobre */
 .sobre .container {
     display: flex;
-    flex-wrap: wrap; /* Permite que se adapte a diferentes tamanhos de tela */
     align-items: center;
+    justify-content: space-between;
 }
 
 .sobre .sobre-text {
-    width: 100%; /* Altera para 100% para telas pequenas */
-    padding: 0 5%; /* Usando porcentagem */
+    width: 50%;
+    padding-right: 40px;
 }
 
 .sobre .sobre-text p {
-    margin: 2%;
+    margin: 18px;
     color: #000000a6;
 }
 
 .sobre .sobre-img {
-    width: 100%; /* Altera para 100% para telas pequenas */
+    width: 50%;
 }
 
 .sobre .sobre-img img {
-    width: 100%; /* Faz a imagem ocupar 100% do seu contêiner */
+    width: 100%;
     border-radius: 50px;
 }
 
-/* Serviços */
+/* Página serviços */
 .servicos h3 {
     text-align: center;
 }
@@ -257,21 +279,24 @@ nav ul a:hover::after {
     display: flex;
     justify-content: center;
     margin-top: 20px;
-    flex-wrap: wrap; /* Permite que se adapte a diferentes tamanhos de tela */
+    flex-wrap: wrap;
 }
 
 .servicos .row-card-item {
     background-color: rgb(227, 191, 101);
-    width: 90%; /* Altera para 90% para telas pequenas */
-    max-width: 350px; /* Mantém a largura máxima */
+    width: 350px;
     padding: 20px;
     border-radius: 14px;
-    margin: 2%; /* Usando porcentagem para espaçamento */
+    margin: 20px;
 }
 
 .servicos .row-card-item:hover {
     background-color: rgba(255, 217, 0, 0.509);
     transition: 0.3s;
+}
+
+.servicos .row-card-item:hover p {
+    color: #ffffff;
 }
 
 .servicos .row-card-item img {
@@ -286,35 +311,189 @@ nav ul a:hover::after {
     transition: 0.3s;
 }
 
-.servicos .row-card-item p.descricao-servico {
-    transition: 0.3s;
-}
-
-/* Contato */
-.contacto-info {
+/* Página de contactos */
+.contacto-info{
     display: flex;
     justify-content: space-between;
-    flex-wrap: wrap; /* Permite que se adapte a diferentes tamanhos de tela */
     margin-top: 50px;
-}
 
-.contacto-info .left-side {
-    width: 100%; /* Altera para 100% para telas pequenas */
+}
+.contacto-info .left-side{
+    width: 50%;
     padding: 30px;
     background-color: #f5ef42;
     border-radius: 14px;
-    margin: 0 0 20px 0; /* Adiciona espaçamento inferior */
+    margin-right: 50px;
+    height: fit-content;
+    
 }
-
-.contacto-info .right-side {
-    width: 100%; /* Altera para 100% para telas pequenas */
+.contacto-info .left-side div{
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    
 }
-
-.contacto-info .right-side input,
-.contacto-info .right-side textarea {
+.contacto-info .left-side div i{
+    font-size: 24px;
+    margin-right: 20px;
+    color: white;
+}
+.contacto-info .left-side p{
+    font-size: 17px;
+    color: white;
+}
+.contacto-info .right-side{
+    width: 50%;
+}
+.contacto-info .right-side input{
     display: block;
     width: 100%;
     margin-bottom: 10px;
+    height: 47px;
     padding: 15px;
     border-radius: 9px;
     transition: 0.3s;
+    border: 1 px solid #f1f1f1;
+    color: #212121;
+    font-weight: lighter;
+    border: none;
+}
+.contacto-info .right-side input:focus,
+.contacto-info .right-side textarea:focus{
+    border-color: #ece522;
+}
+.contacto-info .right-side textarea{
+    border: 1px solid #f1f1f1;
+    color: #212121;
+    border-radius: 9px;
+    margin-bottom: 10px;
+    padding: 15px;
+    width: 100%;
+    transition: 0.3s;
+    resize: none;
+}
+.contacto-info .right-side button{
+    border: none;
+
+}
+
+
+/* end pagina de contacos */
+
+/* pagina contactos responsivo */
+.contacto .contacto-info{
+    flex-direction: column-reverse ;
+}
+.contacto-info .right-side,
+.contacto-info .left-side{
+    width: 100%;
+}
+.contacto-info .right-side{
+    margin-bottom: 30px;
+
+}
+/* Responsividade */
+@media(max-width: 830px) {
+    .ul {
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-color: rgba(245, 200, 142, 0.872);
+        width: 100%;
+        height: 100%;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        clip-path: circle(0% at 100% 0);
+        transition: 0.7s;
+    }
+
+    .ul.open {
+        clip-path: circle(141.4% at 100% 0);
+    }
+
+    .ul a {
+        margin: 10px 0;
+        font-size: 16px;
+    }
+
+    nav .menu-icon {
+        display: block;
+    }
+
+    nav .close-icon {
+        display: block;
+        position: absolute;
+        top: 46px;
+        right: 28px;
+    }
+
+    .saiba-mais .container {
+        flex-direction: column;
+    }
+
+    .saiba-mais .saiba-mais-text,
+    .saiba-mais .saiba-mais-img {
+        width: 100%;
+    }
+
+    .banner .banner-text {
+        padding: 0;
+        margin: 80px;
+    }
+
+    .depoimentos .card-item {
+        width: 100%;
+    }
+
+    .sobre .sobre-img,
+    .sobre .sobre-text {
+        width: 100%;
+    }
+
+    .sobre .sobre-text {
+        margin-top: 40px;
+    }
+
+  
+
+    section, footer {
+        padding: 34px 0;
+        background-attachment: scroll;
+    }
+
+    .banner {
+        background-size: cover;
+        background-position: center;
+        height: 50vh;
+    }
+}
+
+/* Ajuste de fontes e espaçamento */
+h3 {
+    font-size: clamp(24px, 5vw, 50px);
+}
+
+p {
+    font-size: clamp(14px, 2.5vw, 25px);
+}
+
+.banner .banner-text h1 {
+    font-size: clamp(18px, 4vw, 25px);
+}
+
+.banner .banner-text p {
+    font-size: clamp(16px, 4vw, 25px);
+}
+
+.saiba-mais .saiba-mais-text h3 {
+    font-size: clamp(30px, 6vw, 56px);
+}
+
+.depoimentos .card-item .nome-user {
+    font-size: clamp(18px, 3vw, 20px);
+}
+
+.depoimentos .card-item .depoimentos-user {
+    font-size: clamp(14px, 2.5vw, 15px);
+}
