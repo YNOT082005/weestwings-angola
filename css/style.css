@@ -11,22 +11,23 @@
 
 body {
     background-color: #f6e9c031;
+    font-size: 1rem; /* Tamanho base */
 }
 
 section, footer {
-    padding: 54px 0;
+    padding: 4vw 0;
     background-position: center;
     background-size: cover;
     background-attachment: scroll;
 }
 
 h3 {
-    font-size: 50px;
+    font-size: 4vw; /* Responsivo ao tamanho da viewport */
 }
 
 p {
     color: #0000009c;
-    /* cor do paragrafo (p) escrito bem vindos a west... */
+    font-size: 1.2rem; /* Aumenta ligeiramente para melhor legibilidade */
 }
 
 .container {
@@ -36,10 +37,9 @@ p {
 }
 
 .btn {
-    /* botao contactos config */
     background-color: #ece522;
     color: white;
-    padding: 10px 15px;
+    padding: 1vw 2vw;
     cursor: pointer;
     display: inline-block;
     transition: 0.1s;
@@ -47,21 +47,20 @@ p {
 
 .btn:hover {
     background-color: #f8f89a;
-    /* animação ao clicar o botão contactos */
 }
 
 header {
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
-    height: 100vh; /* Define a altura como 100% da altura da viewport */
+    height: 100vh;
 }
 
 nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding-top: 30px;
+    padding-top: 3vw;
 }
 
 nav ul {
@@ -70,38 +69,35 @@ nav ul {
 }
 
 nav ul a {
-    /* botao home, contactos,etc */
     color: #f9f9f9;
-    margin: 0 25px;
+    margin: 0 2vw;
     text-transform: uppercase;
-    font-size: 14px;
+    font-size: 1.2rem;
     display: block;
 }
 
 nav ul a::after {
     content: "";
     background-color: #ece522;
-    height: 3px; /* animação de baixo dos links */
+    height: 3px;
     width: 0%;
     display: block;
 }
 
 nav ul a:hover::after {
     width: 100%;
-    /* continuação da animação */
 }
 
-/* Menu mobile */
 nav .menu-icon {
     cursor: pointer;
-    font-size: 25px;
+    font-size: 5vw;
     color: white;
     display: none;
 }
 
 nav .close-icon {
     display: none;
-    font-size: 30px;
+    font-size: 6vw;
     color: white;
 }
 
@@ -115,18 +111,18 @@ nav .close-icon {
 }
 
 .banner .banner-text {
-    margin: 150px;
+    margin: 10vh 5vw;
     text-align: center;
-    padding: 0 90px;
+    padding: 0 10vw;
 }
 
 .banner .banner-text h1 {
-    font-size: 25px;
+    font-size: 5vw;
     color: white;
 }
 
 .banner .banner-text p {
-    font-size: 25px;
+    font-size: 2.5vw;
     color: #ffffff;
     font-weight: lighter;
     margin: 12px 0;
@@ -140,11 +136,11 @@ nav .close-icon {
 
 .saiba-mais .saiba-mais-text {
     width: 50%;
-    padding: 0 40px;
+    padding: 0 4vw;
 }
 
 .saiba-mais .saiba-mais-text h3 {
-    font-size: 56px;
+    font-size: 6vw;
 }
 
 .saiba-mais .saiba-mais-text p {
@@ -155,12 +151,13 @@ nav .close-icon {
     width: 50%;
 }
 
+/* Depoimentos */
 .depoimentos h3 {
     text-align: center;
 }
 
 .depoimentos p {
-    margin-bottom: 20px;
+    margin-bottom: 2vw;
     text-align: center;
 }
 
@@ -168,165 +165,6 @@ nav .close-icon {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-}
-
-.depoimentos .card-item {
-    background-color: rgba(244, 160, 50, 0.728);
-    margin: 15px;
-    text-align: center;
-    width: 350px;
-    transition: 0.3s;
-}
-
-.depoimentos .card-item img {
-    width: 80px;
-    display: block;
-    margin: 10px auto;
-}
-
-.depoimentos .card-item .nome-user {
-    font-weight: 600;
-    font-size: 20px;
-    margin-bottom: 15px;
-}
-
-.depoimentos .card-item .depoimentos-user {
-    font-size: 15px;
-    padding: 0 15px;
-}
-
-.depoimentos .card-item:hover {
-    background-color: rgb(240, 172, 2);
-    margin-top: -5px;
-}
-
-.depoimentos .card-item:hover .nome-user,
-.depoimentos .card-item:hover .depoimentos-user {
-    color: #ffffff;
-}
-
-/* Parceiros */
-.parceiros h3,
-.parceiros p {
-    text-align: center;
-}
-
-.parceiros .container div {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    flex-wrap: wrap;
-}
-
-/* Footer */
-.footer {
-    background-color: rgb(245, 231, 160);
-    text-align: center;
-}
-
-.footer i {
-    color: gold;
-    font-size: 19px;
-    background-color: white;
-    padding: 10px;
-    margin: 3px;
-    border-radius: 10px;
-}
-
-.footer p {
-    margin-top: 10px;
-    color: white;
-}
-
-/* Página sobre */
-.sobre .container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.sobre .sobre-text {
-    width: 50%;
-    padding-right: 40px;
-}
-
-.sobre .sobre-text p {
-    margin: 18px;
-    color: #000000a6;
-}
-
-.sobre .sobre-img {
-    width: 50%;
-}
-
-.sobre .sobre-img img {
-    width: 100%;
-    border-radius: 50px;
-}
-
-/* Página serviços */
-.servicos h3 {
-    text-align: center;
-}
-
-.servicos .container {
-    text-align: center;
-}
-
-.servicos .rows-cards {
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
-    flex-wrap: wrap;
-}
-
-.servicos .row-card-item {
-    background-color: rgb(227, 191, 101);
-    width: 350px;
-    padding: 20px;
-    border-radius: 14px;
-    margin: 20px;
-}
-
-.servicos .row-card-item:hover {
-    background-color: rgba(255, 217, 0, 0.509);
-    transition: 0.3s;
-}
-
-.servicos .row-card-item:hover p {
-    color: #ffffff;
-}
-
-.servicos .row-card-item img {
-    background-color: #f1efad;
-    border-radius: 14px;
-    width: 70px;
-    padding: 9px;
-}
-
-.servicos .row-card-item p.nome-servico {
-    margin: 5px;
-    transition: 0.3s;
-}
-
-/* Página de contactos */
-.contacto-info {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 50px;
-}
-
-.contacto-info .left-side {
-    width: 50%;
-    padding: 30px;
-    background-color: #f5ef42;
-    border-radius: 14px;
-    margin-right: 50px;
-    height: fit-content;
-}
-
-.contacto-info .right-side {
-    width: 50%;
 }
 
 /* Responsividade */
@@ -351,7 +189,7 @@ nav .close-icon {
 
     .ul a {
         margin: 10px 0;
-        font-size: 16px;
+        font-size: 4vw;
     }
 
     nav .menu-icon {
@@ -361,8 +199,8 @@ nav .close-icon {
     nav .close-icon {
         display: block;
         position: absolute;
-        top: 46px;
-        right: 28px;
+        top: 6vw;
+        right: 6vw;
     }
 
     .saiba-mais .container {
@@ -376,7 +214,7 @@ nav .close-icon {
 
     .banner .banner-text {
         padding: 0;
-        margin: 80px;
+        margin: 8vw;
     }
 
     .depoimentos .card-item {
@@ -406,12 +244,12 @@ nav .close-icon {
     header {
         background-size: cover;
         background-position: center;
-        background-attachment: scroll; /* Remove o efeito "fixo" para evitar distorção em dispositivos pequenos */
+        background-attachment: scroll;
     }
 
     .banner {
         background-size: cover;
         background-position: center;
-        height: 50vh; /* Ajusta a altura do banner para telas menores */
+        height: 50vh;
     }
 }
