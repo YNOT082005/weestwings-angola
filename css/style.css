@@ -379,6 +379,19 @@ nav .close-icon {
 
 
 /* end pagina de contacos */
+
+/* pagina contactos responsivo */
+.contacto .contacto-info{
+    flex-direction: column-reverse ;
+}
+.contacto-info .right-side,
+.contacto-info .left-side{
+    width: 100%;
+}
+.contacto-info .right-side{
+    margin-bottom: 30px;
+
+}
 /* Responsividade */
 @media(max-width: 830px) {
     .ul {
